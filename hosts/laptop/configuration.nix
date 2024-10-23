@@ -8,6 +8,11 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ../../modules/hyprland.nix
+      ../../modules/pipewire.nix
+      ../../modules/bluetooth.nix
+      #../../modules/gdm.nix
+      ../../modules/tuigreet.nix
     ];
 
   # Bootloader.
@@ -63,8 +68,17 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-     neovim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-  #  wget
+    neovim 
+    wget
+    kitty
+    tree
+    chromium
+    htop
+    btop
+    pulsemixer
+    wev
+    git
+    acpi
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -94,6 +108,14 @@
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "24.05"; # Did you read the comment?
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ]
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
+  home-manager = { 
+    extraSpecialArgs = { inherit inputs; };
+    users = { 
+      "raphael" = import ./home.nix;
+    };
+  };
+  environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
 }
