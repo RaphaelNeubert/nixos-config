@@ -25,12 +25,17 @@
         kb_options = "caps:swapescape, altwin:swap_alt_win";
         repeat_rate = 50;
         repeat_delay = 300;
+	touchpad = {
+	  natural_scroll = false;
+	};
       };
       bind = [
 	  "$mod SHIFT, Return, exec, $terminal"
 	  "$mod SHIFT, C, killactive,"
 	  "$mod CTRL, delete, exit,"
+
           "$mod, W, exec, chromium"
+          "$mod, V, exec, $terminal -e pulsemixer"
           ", Print, exec, grimblast copy area"
 
 	  "$mod, M, fullscreen, 1"
@@ -46,7 +51,6 @@
 	  "$mod SHIFT, L, movewindow, r"
 	  "$mod SHIFT, K, movewindow, u"
 	  "$mod SHIFT, J, movewindow, d"
-
         ]
         ++ (
           # workspaces
@@ -60,6 +64,15 @@
             )
             9)
         );
+	# l: inhibitor ressistant, e: repeat on hold
+	bindle = [
+	  ", XF86MonBrightnessUp, exec, brightnessctl set 1%+"
+	  ", XF86MonBrightnessDown, exec, brightnessctl set 1%-"
+	  ", XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
+ 	  ", XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
+	  ", XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+	  ", XF86AudioMicMute, exec, wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
+	];
 	bindm = [
 	  "$mod, mouse:272, movewindow"
 	  "$mod, mouse:273, resizewindow"

@@ -7,9 +7,10 @@
 		  mainBar = {
 			  height = 34;
 			  layer = "top";
+			  spacing = 16;
 			  modules-left = [ "hyprland/workspaces" ];
 			  modules-center = [ "clock" ];
-			  modules-right = [ "network" "memory" "cpu" "wireplumber" "bluetooth"];
+			  modules-right = [ "network" "battery" "backlight" "wireplumber" "memory" "cpu" "bluetooth"];
 
 			  "hyprland/workspaces" = {
 				  format = "{name}";
@@ -58,9 +59,9 @@
 			  };
 
 			  "bluetooth" = {
-			   format-off = "";
-			   format-on = " ";
-			   format-connected = " ";
+				   format-off = "";
+				   format-on = " ";
+				   format-connected = " ";
 			  };
 			  "memory" = {
 				  interval = 10;
@@ -75,6 +76,20 @@
 				format-muted = "";
 				format-icons = ["" "" ""];
 			  };
+			  "battery" = {
+			  	interval = 60;
+				states = { 
+					warning = 30; 
+					critical = 15;
+				};
+				format = "{icon} {capacity}%";
+			        format-icons = ["" "" "" "" ""];
+			  };
+			  "backlight" = {
+				#"device": "intel_backlight",
+				format = "{icon} {percent}%";
+				format-icons = ["" ""];
+			};
 		  };
 	  };
 			  style = ''
