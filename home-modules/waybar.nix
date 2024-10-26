@@ -10,7 +10,7 @@
 			  spacing = 16;
 			  modules-left = [ "hyprland/workspaces" ];
 			  modules-center = [ "clock" ];
-			  modules-right = [ "network" "battery" "backlight" "wireplumber" "memory" "cpu" "bluetooth"];
+			  modules-right = [ "network" "battery" "backlight" "wireplumber" "memory" "cpu" "network#signal" "bluetooth"];
 
 			  "hyprland/workspaces" = {
 				  format = "{name}";
@@ -54,8 +54,18 @@
 			  };
 
 			  "network" = {
-			   interval = 1;
-			   format = "{bandwidthUpBytes} {bandwidthDownBytes}";
+				   interval = 1;
+				   format = " {bandwidthUpBytes}   {bandwidthDownBytes} ";
+				   #format-wifi = "  {signalStrength}%";
+
+			  };
+			  "network#signal" = {
+				   interval = 15;
+				   format-wifi = "{icon}";
+				   format-ethernet = " ";
+				   format-icons = ["󰤯 " "󰤟 " "󰤢 " "󰤢 " "󰤨 "];
+				   tooltip-format-wifi = "{signalStrength}% | {ipaddr}";
+				   tooltip-format-ethernet = "{ipaddr}";
 			  };
 
 			  "bluetooth" = {
@@ -73,8 +83,8 @@
 			  };
 			  "wireplumber" = {
 			  	format = "{icon} {volume}%";
-				format-muted = "";
-				format-icons = ["" "" ""];
+				format-muted = "";
+				format-icons = [" " " "];
 			  };
 			  "battery" = {
 			  	interval = 60;
@@ -83,6 +93,8 @@
 					critical = 15;
 				};
 				format = "{icon} {capacity}%";
+				format-charging = " {capacity}%";
+				format-plugged = " {capacity}%";
 			        format-icons = ["" "" "" "" ""];
 			  };
 			  "backlight" = {

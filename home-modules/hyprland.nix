@@ -1,9 +1,9 @@
 { config, pkgs, ... }:
 
 {
-  home.packages = with pkgs; [
-    font-awesome
-  ];
+  #home.packages = with pkgs; [
+  #  font-awesome
+  #];
 
   wayland.windowManager.hyprland = {
     enable = true;
@@ -31,6 +31,7 @@
       };
       bind = [
 	  "$mod SHIFT, Return, exec, $terminal"
+	  "$mod, P, exec, rofi -show drun"
 	  "$mod SHIFT, C, killactive,"
 	  "$mod CTRL, delete, exit,"
 

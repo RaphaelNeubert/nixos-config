@@ -88,7 +88,12 @@
     grimblast
     wl-clipboard  # like xclip
     wlr-randr	  # like xrandr
+    rofi-wayland
   ];
+
+  fonts.packages = with pkgs; [
+    font-awesome
+];
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
