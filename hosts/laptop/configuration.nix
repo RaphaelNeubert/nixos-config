@@ -106,7 +106,7 @@
   # List services that you want to enable:
 
   # Enable the OpenSSH daemon.
-  # services.openssh.enable = true;
+  services.openssh.enable = true;
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
@@ -132,5 +132,6 @@
   };
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
   environment.variables.GTK_THEME = "Adwaita-dark";
+
 
 }

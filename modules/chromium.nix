@@ -15,8 +15,6 @@
 
     extraOpts = {
       "PromptForDownloadLocation" = true;
-      #"DefaultDownloadDirectory" = "/home/${user_name}/downloads";
-
     };
 
     # Install extensions

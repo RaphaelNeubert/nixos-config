@@ -10,6 +10,7 @@
   	../../home-modules/waybar.nix
   	../../home-modules/hyprland.nix
   	#../../home-modules/chromium.nix
+  	../../home-modules/nvim.nix
   ];
 
   # This value determines the Home Manager release that your configuration is
@@ -77,6 +78,14 @@
   home.sessionVariables = {
     EDITOR = "nvim";
   };
+  xdg.userDirs = {
+	  download = "${config.home.homeDirectory}/downloads";
+	  documents = "${config.home.homeDirectory}/documents";
+	  pictures = "${config.home.homeDirectory}/pictures";
+	  videos = "${config.home.homeDirectory}/videos";
+	  music = "${config.home.homeDirectory}/music";
+  };
+
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
