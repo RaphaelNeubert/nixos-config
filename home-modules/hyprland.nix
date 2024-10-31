@@ -80,6 +80,9 @@
 	];
 
       misc = {
+              enable_swallow = true;
+	      swallow_regex= "^(kitty)$";
+
 	      disable_hyprland_logo = true;
       };
     };
