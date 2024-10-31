@@ -14,6 +14,7 @@
       ../../modules/bluetooth.nix
       #../../modules/gdm.nix
       ../../modules/tuigreet.nix
+      ../../modules/chromium.nix
     ];
 
   # Bootloader.
@@ -83,12 +84,26 @@
     wget
     kitty
     tree
-    chromium
     htop
     btop
     pulsemixer
     wev
     git
+    acpi
+    networkmanagerapplet
+    zathura
+    python3
+    brightnessctl
+    xournalpp
+    libreoffice-qt
+    grimblast
+    wl-clipboard  # like xclip
+    wlr-randr	  # like xrandr
+    rofi-wayland
+  ];
+
+  fonts.packages = with pkgs; [
+    font-awesome
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
