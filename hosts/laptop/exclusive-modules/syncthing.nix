@@ -12,25 +12,25 @@
 		user = "raphael";
 		group = "users";
 		guiAddress = "0.0.0.0:8384";
+		overrideDevices = true;
+		overrideFolders = true;
 		declarative = {
-			overrideDevices = true;
-			overrideFolders = true;
-			#devices = {
-			#	"laptop" = { id = "REALLY-LONG-LAPTOP-SYNCTHING-KEY-HERE"; };
-			#};
-			#folders = {
-			#	"tu" = { 
-			#		path = "/home/raphael/tu"; 
-			#		devices = [ "laptop" ]; 
-			#		versioning = { 
-			#			type = "staggered"; 
-			#			params = { 
-			#				cleanInterval = "3600"; 
-			#				maxAge = "2592000";
-			#			}; 
-			#		}; 
-			#	};
-			#};
+			devices = {
+				"desktop" = { id = "T33LOQG-DU3JDXZ-TAAVCFE-TWQRWJN-TYYOUVC-FOUUUJA-HWKDXWB-GVXKDAX"; };
+			};
+			folders = {
+				"tu" = { 
+					path = "/home/raphael/tu"; 
+					devices = [ "desktop" ]; 
+					versioning = { 
+						type = "staggered"; 
+						params = { 
+							cleanInterval = "3600"; 
+							maxAge = "2592000";
+						}; 
+					}; 
+				};
+			};
 
 		};
 	};
