@@ -14,7 +14,7 @@
 		guiAddress = "0.0.0.0:8384";
 		overrideDevices = true;
 		overrideFolders = true;
-		declarative = {
+		settings = {
 			devices = {
 				"desktop" = { id = "T33LOQG-DU3JDXZ-TAAVCFE-TWQRWJN-TYYOUVC-FOUUUJA-HWKDXWB-GVXKDAX"; };
 			};
