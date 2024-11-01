@@ -89,5 +89,17 @@
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
+   gtk = {
+      enable = true;
+      theme = {
+        name = "Adwaita-dark";
+        package = pkgs.gnome-themes-extra;
+      };
+    };
+    qt = {
+    enable = true;
+    #platformTheme = "gnome";
+    style.name = "adwaita-dark";
+  };
 
 }

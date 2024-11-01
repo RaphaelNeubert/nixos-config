@@ -8,6 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ../../modules/packages.nix
       ../../modules/nvidia.nix
       ../../modules/hyprland.nix
       ../../modules/pipewire.nix
@@ -80,27 +81,9 @@
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
+  # only defines desktop specific programs
   environment.systemPackages = with pkgs; [
-    neovim 
-    wget
-    kitty
-    tree
-    htop
-    btop
-    pulsemixer
-    wev
-    git
-    acpi
-    networkmanagerapplet
-    zathura
-    python3
-    brightnessctl
-    xournalpp
-    libreoffice-qt
-    grimblast
-    wl-clipboard  # like xclip
-    wlr-randr	  # like xrandr
-    rofi-wayland
+
   ];
 
   fonts.packages = with pkgs; [
