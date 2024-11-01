@@ -1,9 +1,14 @@
-{ config, lib, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
 {
   programs.chromium = {
     enable = true;
-    package = pkgs.chromium;  # Use Chromium
+    package = pkgs.chromium; # Use Chromium
 
     # Add Chromium flags if necessary
     commandLineArgs = [
@@ -14,9 +19,8 @@
 
     # Install extensions
     extensions = [
-      {id =  "cjpalhdlnbpafiamejdnhcphjbkeiagm";}  # ublock origin
-      {id =  "mnjggcdmjocbbbhaepdhchncahnbgone";}  # sponsorblock
+      { id = "cjpalhdlnbpafiamejdnhcphjbkeiagm"; } # ublock origin
+      { id = "mnjggcdmjocbbbhaepdhchncahnbgone"; } # sponsorblock
     ];
   };
 }
-

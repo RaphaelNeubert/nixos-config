@@ -1,9 +1,13 @@
-
-{ config, lib, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
 {
 
-  environment.systemPackages = with pkgs; [ 
+  environment.systemPackages = with pkgs; [
     chromium
   ];
   programs.chromium = {
@@ -19,9 +23,8 @@
 
     # Install extensions
     extensions = [
-      "cjpalhdlnbpafiamejdnhcphjbkeiagm"  # ublock origin
-      "mnjggcdmjocbbbhaepdhchncahnbgone"  # sponsorblock
+      "cjpalhdlnbpafiamejdnhcphjbkeiagm" # ublock origin
+      "mnjggcdmjocbbbhaepdhchncahnbgone" # sponsorblock
     ];
   };
 }
-

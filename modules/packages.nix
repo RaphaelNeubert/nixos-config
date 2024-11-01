@@ -1,9 +1,8 @@
-
 { config, pkgs, ... }:
 
 {
   environment.systemPackages = with pkgs; [
-    neovim 
+    neovim
     wget
     kitty
     tree
@@ -16,8 +15,9 @@
     xournalpp
     libreoffice-qt
     grimblast
-    wl-clipboard  # like xclip
-    wlr-randr	  # like xrandr
+    wl-clipboard # like xclip
+    wlr-randr # like xrandr
     rofi-wayland
+    nixfmt-rfc-style
   ];
 }

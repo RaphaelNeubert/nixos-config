@@ -2,21 +2,26 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, inputs, ... }:
+{
+  config,
+  pkgs,
+  inputs,
+  ...
+}:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-      ../../modules/packages.nix
-      ../../modules/hyprland.nix
-      ../../modules/pipewire.nix
-      ../../modules/bluetooth.nix
-      #../../modules/gdm.nix
-      ../../modules/tuigreet.nix
-      ../../modules/chromium.nix
-      ./exclusive-modules/syncthing.nix
-    ];
+  imports = [
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+    ../../modules/packages.nix
+    ../../modules/hyprland.nix
+    ../../modules/pipewire.nix
+    ../../modules/bluetooth.nix
+    #../../modules/gdm.nix
+    ../../modules/tuigreet.nix
+    ../../modules/chromium.nix
+    ./exclusive-modules/syncthing.nix
+  ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -61,8 +66,11 @@
   users.users.raphael = {
     isNormalUser = true;
     description = "Raphael Neubert";
-    extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+    ];
+    packages = with pkgs; [ ];
   };
 
   # Allow unfree packages
@@ -77,7 +85,7 @@
 
   fonts.packages = with pkgs; [
     font-awesome
-];
+  ];
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
@@ -106,16 +114,20 @@
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "24.05"; # Did you read the comment?
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
 
-  home-manager = { 
-    extraSpecialArgs = { inherit inputs; };
-    users = { 
+  home-manager = {
+    extraSpecialArgs = {
+      inherit inputs;
+    };
+    users = {
       "raphael" = import ./home.nix;
     };
   };
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
   #environment.variables.GTK_THEME = "Adwaita-dark";
-
 
 }
