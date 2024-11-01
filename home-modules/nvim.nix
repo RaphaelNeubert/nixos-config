@@ -17,6 +17,8 @@
 
     colorschemes.gruvbox.enable = true;
 
+    clipboard.register = "unnamedplus";
+
     globals.mapleader = " ";
 
     opts = {
