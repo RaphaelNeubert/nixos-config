@@ -1,6 +1,4 @@
 {
-  config,
-  lib,
   pkgs,
   ...
 }:
@@ -8,7 +6,16 @@
 {
 
   environment.systemPackages = with pkgs; [
-    chromium
+    #chromium
+    (chromium.override {
+      commandLineArgs = [ # not sure if these even get applied, chrome://flags seems to say no
+        "--enable-features=VaapiVideoDecodeLinuxGL"
+        "--ignore-gpu-blocklist"
+        "--enable-zero-copy"
+      ];
+      enableWideVine = true;
+
+    })
   ];
   programs.chromium = {
     enable = true;
@@ -33,9 +40,5 @@
       "nngceckbapebfimnlniiiahkandclblb" # bitwarden
     ];
   };
-  nixpkgs.config = {
-   chromium = {
-     enableWideVine = true;
-    };
-};
+  environment.sessionVariables.NIXOS_OZONE_WL = "1"; # fixed the flickering
 }
