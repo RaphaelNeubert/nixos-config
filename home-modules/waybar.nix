@@ -87,6 +87,7 @@
           format-off = "";
           format-on = " ";
           format-connected = " ";
+	  on-click = "bluetoothctl connect 38:8F:30:82:6E:BE";
         };
         "memory" = {
           interval = 10;

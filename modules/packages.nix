@@ -20,5 +20,6 @@
     rofi-wayland
     nixfmt-rfc-style
     zathura
+    brave
   ];
 }
