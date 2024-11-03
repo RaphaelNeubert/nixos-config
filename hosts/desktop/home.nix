@@ -10,6 +10,8 @@
     ../../home-modules/waybar.nix
     ../../home-modules/hyprland.nix
     ../../home-modules/nvim.nix
+    ../../home-modules/alias.nix
+    ../../home-modules/zsh.nix
   ];
 
   # This value determines the Home Manager release that your configuration is

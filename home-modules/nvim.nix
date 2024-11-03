@@ -57,6 +57,7 @@
         enable = true;
         servers = {
           jedi_language_server.enable = true; # python
+	  nixd.enable = true;                 # nix
         };
       };
     };

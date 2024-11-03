@@ -19,5 +19,6 @@
     wlr-randr # like xrandr
     rofi-wayland
     nixfmt-rfc-style
+    zathura
   ];
 }
