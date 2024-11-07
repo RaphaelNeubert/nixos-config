@@ -131,4 +131,6 @@
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
   #environment.variables.GTK_THEME = "Adwaita-dark";
 
+  programs.zsh.enable = true;
+  users.defaultUserShell = pkgs.zsh;
 }
