@@ -14,6 +14,7 @@
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
     ../../modules/packages.nix
+    ../../modules/services.nix
     ../../modules/nvidia.nix
     ../../modules/hyprland.nix
     ../../modules/pipewire.nix
