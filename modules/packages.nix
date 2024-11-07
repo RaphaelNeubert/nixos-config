@@ -22,5 +22,6 @@
     zathura
     brave
     ripgrep # for neovim - telescope
+    lazygit
   ];
 }

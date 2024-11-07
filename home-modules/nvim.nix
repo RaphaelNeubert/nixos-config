@@ -30,6 +30,13 @@
       number = true;
       relativenumber = true;
     };
+    keymaps = [
+      {
+        key = "<leader>lg";
+        action = "<cmd>LazyGit<cr>";
+        options.desc = "[L]azy [G]it";
+      }
+    ];
 
     plugins = {
       lualine.enable = true;
@@ -84,6 +91,9 @@
             options.desc = "[ ] Find existing buffers";
           };
         };
+      };
+      lazygit = {
+        enable = true;
       };
     };
 
