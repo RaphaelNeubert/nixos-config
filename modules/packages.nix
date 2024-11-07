@@ -21,5 +21,6 @@
     nixfmt-rfc-style
     zathura
     brave
+    ripgrep # for neovim - telescope
   ];
 }

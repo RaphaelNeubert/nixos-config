@@ -57,7 +57,32 @@
         enable = true;
         servers = {
           jedi_language_server.enable = true; # python
-	  nixd.enable = true;                 # nix
+          nixd.enable = true; # nix
+        };
+      };
+      web-devicons = {
+        # required for telescope
+        enable = true;
+      };
+      telescope = {
+        enable = true;
+        keymaps = {
+          "<leader>sf" = {
+            action = "find_files";
+            options.desc = "[S]earch [F]iles";
+          };
+          "<leader>sg" = {
+            action = "live_grep";
+            options.desc = "[S]earch by [G]rep";
+          };
+          "<leader>sk" = {
+            action = "keymaps";
+            options.desc = "[S]earch [K]eymaps";
+          };
+          "<leader><leader>" = {
+            action = "buffers";
+            options.desc = "[ ] Find existing buffers";
+          };
         };
       };
     };
