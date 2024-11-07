@@ -23,5 +23,6 @@
     brave
     ripgrep # for neovim - telescope
     lazygit
+    qlcplus
   ];
 }
