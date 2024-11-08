@@ -87,7 +87,7 @@
           format-off = "";
           format-on = " ";
           format-connected = " ";
-	  on-click = "bluetoothctl connect 38:8F:30:82:6E:BE";
+          on-click = "bluetoothctl connect 38:8F:30:82:6E:BE";
         };
         "memory" = {
           interval = 10;
@@ -133,33 +133,38 @@
       };
     };
     style = ''
-        * {
-          /* `otf-font-awesome` is required to be installed for icons */
-          font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
-          font-size: 13px;
-      }
+              * {
+                /* `otf-font-awesome` is required to be installed for icons */
+                font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+                font-size: 13px;
+            }
 
-      window#waybar {
-          background-color: rgba(43, 48, 59, 0.5);
-          border-bottom: 3px solid rgba(100, 114, 125, 0.5);
-          color: #ffffff;
-          transition-property: background-color;
-          transition-duration: .5s;
-      }
-      #workspaces button.active {
-      	color: #ecd3a0;
-      	padding-left: 1px;
-      	padding-right: 5px;
-      	font-family: Iosevka Nerd Font;
-      	font-weight: bold;
-      	font-size: 12px;
-      	margin-left: 0em;
-      	margin-right: 0em;
-      transition: all 0.5s cubic-bezier(0.55, -0.68, 0.48, 1.68);
-      }
-      #bluetooth.connected { 
-      	color: #5291f7;
-      }
+            window#waybar {
+                background-color: rgba(43, 48, 59, 0.5);
+                border-bottom: 3px solid rgba(100, 114, 125, 0.5);
+                color: #ffffff;
+                transition-property: background-color;
+                transition-duration: .5s;
+            }
+            #workspaces {
+            	background-color: #333333;
+            	margin-bottom: 3px;
+      	}
+            #workspaces button.active {
+            	background-color: #535454;
+            	color: #ecd3a0;
+            	padding-left: 3px;
+            	padding-right: 3px;
+            	font-family: Iosevka Nerd Font;
+            	font-weight: bold;
+            	font-size: 12px;
+            	margin-left: 0em;
+            	margin-right: 0em;
+            transition: all 0.5s cubic-bezier(0.55, -0.68, 0.48, 1.68);
+            }
+            #bluetooth.connected { 
+            	color: #5291f7;
+            }
     '';
   };
 }
