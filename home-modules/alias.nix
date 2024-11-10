@@ -7,5 +7,7 @@
     ls = "ls -hN --color=auto --group-directories-first";
     grep = "grep --color=auto";
     diff = "diff --color=auto";
+
+    nnenv = ". ~/tu/env/bin/activate";
   };
 }
