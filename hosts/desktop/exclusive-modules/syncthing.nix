@@ -19,7 +19,7 @@
     settings = {
       devices = {
         "laptop" = {
-          id = "SSYZN67-EJGYLJB-TIZI6BX-H25UHEU-NO3EC2V-RHQN2ZC-X6HHVWS-5LM7XAX";
+          id = "NBIBOFA-WDPJGWW-UAGVRYA-7PLVFCU-SZ4MYL3-A2K4Q2Z-4V4H566-QNUV3AU";
         };
       };
       folders = {
