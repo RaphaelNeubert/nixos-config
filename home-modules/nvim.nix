@@ -95,6 +95,9 @@
       lazygit = {
         enable = true;
       };
+      vimtex = {
+        enable = true;
+      };
     };
 
   };

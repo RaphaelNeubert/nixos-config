@@ -24,5 +24,7 @@
     ripgrep # for neovim - telescope
     lazygit
     qlcplus
+    texlive.combined.scheme-medium
+    unzip
   ];
 }
