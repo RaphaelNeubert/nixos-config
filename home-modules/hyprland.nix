@@ -36,7 +36,7 @@
           "$mod SHIFT, C, killactive,"
           "$mod CTRL, delete, exit,"
 
-          "$mod, W, exec, chromium"
+          "$mod, W, exec, chromium --disable-gpu-compositing"
           "$mod, V, exec, $terminal -e pulsemixer"
           ", Print, exec, grimblast copy area"
 
@@ -53,6 +53,9 @@
           "$mod SHIFT, L, movewindow, r"
           "$mod SHIFT, K, movewindow, u"
           "$mod SHIFT, J, movewindow, d"
+
+          "$mod SHIFT, comma, movecurrentworkspacetomonitor, l"
+   	  "$mod SHIFT, period, movecurrentworkspacetomonitor, r"
         ]
         ++ (
           # workspaces
