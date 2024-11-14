@@ -23,7 +23,7 @@
 
         "hyprland/workspaces" = {
           format = "{name}";
-          all-outputs = true;
+          #all-outputs = true;
           on-click = "activate";
           format-icons = {
             active = " 󱎴";
