@@ -26,5 +26,6 @@
     qlcplus
     texlive.combined.scheme-medium
     unzip
+    mpv
   ];
 }
