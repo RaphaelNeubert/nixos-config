@@ -11,6 +11,7 @@
     settings = {
       exec-once = [
         "waybar"
+	"swww-daemon"
       ];
       # preferred - use the display's preferred size and refresh rate
       # auto - automatically place monitor (by default on the right of existing ones)

@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
   environment.systemPackages = with pkgs; [
@@ -26,6 +26,8 @@
     qlcplus
     texlive.combined.scheme-medium
     unzip
+    swww # wallpaperd
     mpv
+    qimgv
   ];
 }
