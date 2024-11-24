@@ -13,6 +13,7 @@
     ../../home-modules/nvim.nix
     ../../home-modules/alias.nix
     ../../home-modules/zsh.nix
+    ../../home-modules/zathura.nix
   ];
 
   # This value determines the Home Manager release that your configuration is

@@ -19,7 +19,6 @@
     wlr-randr # like xrandr
     rofi-wayland
     nixfmt-rfc-style
-    zathura
     brave
     ripgrep # for neovim - telescope
     lazygit
