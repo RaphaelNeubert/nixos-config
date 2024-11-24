@@ -30,6 +30,17 @@
       number = true;
       relativenumber = true;
     };
+    autoCmd = [
+      {
+        command = "silent !nixfmt %";
+        event = [
+          "BufWritePost"
+        ];
+        pattern = [
+          "*.nix"
+        ];
+      }
+    ];
     keymaps = [
       {
         key = "<leader>lg";
