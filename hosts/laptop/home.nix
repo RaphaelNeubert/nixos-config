@@ -14,6 +14,7 @@
     ../../home-modules/alias.nix
     ../../home-modules/zsh.nix
     ../../home-modules/zathura.nix
+    ../../home-modules/kitty.nix
   ];
 
   # This value determines the Home Manager release that your configuration is
@@ -89,7 +90,7 @@
     music = "${config.home.homeDirectory}/music";
   };
 
-  xdg.mimeApps = { 
+  xdg.mimeApps = {
     enable = true;
     defaultApplications = {
       "x-scheme-handler/http" = [ "chromium-browser.desktop" ];
@@ -100,7 +101,6 @@
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
-
 
   gtk = {
     enable = true;

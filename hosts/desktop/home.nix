@@ -13,6 +13,7 @@
     ../../home-modules/alias.nix
     ../../home-modules/zsh.nix
     ../../home-modules/zathura.nix
+    ../../home-modules/kitty.nix
   ];
 
   # This value determines the Home Manager release that your configuration is
@@ -97,7 +98,7 @@
       name = "Adwaita-dark";
       package = pkgs.gnome-themes-extra;
     };
-   gtk3.extraConfig.gtk-application-prefer-dark-theme = 1;
+    gtk3.extraConfig.gtk-application-prefer-dark-theme = 1;
 
   };
   qt = {
