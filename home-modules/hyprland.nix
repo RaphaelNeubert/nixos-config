@@ -9,9 +9,11 @@
     enable = true;
 
     settings = {
+      "$mod" = "SUPER";
+      "$terminal" = "kitty";
       exec-once = [
         "waybar"
-	"swww-daemon"
+        "swww-daemon"
       ];
       # preferred - use the display's preferred size and refresh rate
       # auto - automatically place monitor (by default on the right of existing ones)
@@ -20,8 +22,12 @@
         "DVI-D-2,preferred,auto-left,1"
         "HDMI-A-1,preferred,auto-right,1"
       ];
-      "$mod" = "SUPER";
-      "$terminal" = "kitty";
+      general = {
+        gaps_in = 5;
+        gaps_out = 5;
+        border_size = 2;
+        layout = "master";
+      };
       input = {
         kb_options = "caps:swapescape, altwin:swap_alt_win";
         repeat_rate = 50;
@@ -56,7 +62,7 @@
           "$mod SHIFT, J, movewindow, d"
 
           "$mod SHIFT, comma, movecurrentworkspacetomonitor, l"
-   	  "$mod SHIFT, period, movecurrentworkspacetomonitor, r"
+          "$mod SHIFT, period, movecurrentworkspacetomonitor, r"
         ]
         ++ (
           # workspaces
