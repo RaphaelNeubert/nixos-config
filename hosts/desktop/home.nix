@@ -9,6 +9,7 @@
   imports = [
     ../../home-modules/waybar.nix
     ../../home-modules/hyprland.nix
+    ../../home-modules/hyprlock.nix
     ../../home-modules/nvim.nix
     ../../home-modules/alias.nix
     ../../home-modules/zsh.nix

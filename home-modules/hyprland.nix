@@ -42,6 +42,7 @@
           "$mod, P, exec, rofi -show drun"
           "$mod SHIFT, C, killactive,"
           "$mod CTRL, delete, exit,"
+          "$mod, Q, exec, hyprlock --immediate"
 
           "$mod, W, exec, chromium --disable-gpu-compositing"
           "$mod, V, exec, $terminal -e pulsemixer"
