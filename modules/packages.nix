@@ -32,5 +32,7 @@
     swww # wallpaperd
     mpv
     qimgv
+    bitwarden-cli
+    direnv
   ];
 }

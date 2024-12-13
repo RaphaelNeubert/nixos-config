@@ -82,6 +82,8 @@
     extraGroups = [
       "networkmanager"
       "wheel"
+      "audio"
+      "jackaudio"
     ];
     packages = with pkgs; [ ];
   };
@@ -93,8 +95,14 @@
   # $ nix search wget
   # only defines desktop specific programs
   environment.systemPackages = with pkgs; [
-
+    ardour
+    #pipewire.jack
+    neural-amp-modeler-lv2
+    wineasio
+    jack2
+    qjackctl
   ];
+  programs.steam.enable = true;
 
   fonts.packages = with pkgs; [
     font-awesome
@@ -142,4 +150,6 @@
   };
   programs.zsh.enable = true;
   users.defaultUserShell = pkgs.zsh;
+
+  musnix.enable = true;
 }

@@ -14,6 +14,9 @@
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    musnix = {
+      url = "github:musnix/musnix";
+    };
   };
 
   outputs =
@@ -26,6 +29,7 @@
         modules = [
           ./hosts/desktop/configuration.nix
           inputs.home-manager.nixosModules.default
+          inputs.musnix.nixosModules.musnix
         ];
       };
       nixosConfigurations.laptop = nixpkgs.lib.nixosSystem {
