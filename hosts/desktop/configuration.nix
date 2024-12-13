@@ -95,6 +95,7 @@
   environment.systemPackages = with pkgs; [
 
   ];
+  programs.steam.enable = true;
 
   fonts.packages = with pkgs; [
     font-awesome
