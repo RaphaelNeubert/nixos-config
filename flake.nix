@@ -22,6 +22,16 @@
   outputs =
     { self, nixpkgs, ... }@inputs:
     {
+      nixosConfigurations.desktop2 = nixpkgs.lib.nixosSystem {
+        specialArgs = {
+          inherit inputs;
+        };
+        modules = [
+          ./hosts/desktop2/configuration.nix
+          inputs.home-manager.nixosModules.default
+          inputs.musnix.nixosModules.musnix
+        ];
+      };
       nixosConfigurations.desktop = nixpkgs.lib.nixosSystem {
         specialArgs = {
           inherit inputs;

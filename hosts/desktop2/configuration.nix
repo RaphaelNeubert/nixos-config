@@ -2,7 +2,12 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, inputs, ... }:
+{
+  config,
+  pkgs,
+  inputs,
+  ...
+}:
 
 {
   imports = [
@@ -17,13 +22,24 @@
     #../../modules/gdm.nix
     ../../modules/tuigreet.nix
     ../../modules/chromium.nix
-    #./exclusive-modules/syncthing.nix
+    ./exclusive-modules/syncthing.nix
   ];
 
   # Bootloader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
+  boot.loader.grub.enable = true;
+  boot.loader.grub.device = "/dev/sda";
+  boot.loader.grub.useOSProber = true;
 
+  boot.initrd.luks.devices."luks-b9005e18-810c-4e1f-8fd8-7312cbc23c84".device = "/dev/disk/by-uuid/b9005e18-810c-4e1f-8fd8-7312cbc23c84";
+  # Setup keyfile
+  boot.initrd.secrets = {
+    "/boot/crypto_keyfile.bin" = null;
+  };
+
+  boot.loader.grub.enableCryptodisk = true;
+
+  boot.initrd.luks.devices."luks-63bbad80-65e7-4d9a-b38d-c9a8227a8ba7".keyFile = "/boot/crypto_keyfile.bin";
+  boot.initrd.luks.devices."luks-b9005e18-810c-4e1f-8fd8-7312cbc23c84".keyFile = "/boot/crypto_keyfile.bin";
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
@@ -58,12 +74,18 @@
     variant = "";
   };
 
+  security.sudo.wheelNeedsPassword = false;
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.raphael = {
     isNormalUser = true;
     description = "Raphael Neubert";
-    extraGroups = [ "networkmanager" "wheel" "audio" "jackaudio"];
-    packages = with pkgs; [];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+      "audio"
+      "jackaudio"
+    ];
+    packages = with pkgs; [ ];
   };
 
   # Allow unfree packages
@@ -71,6 +93,7 @@
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
+  # only defines desktop specific programs
   environment.systemPackages = with pkgs; [
     ardour
     #pipewire.jack
@@ -110,8 +133,7 @@
   # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "24.11"; # Did you read the comment?
-
+  system.stateVersion = "24.05"; # Did you read the comment?
 
   nix.settings.experimental-features = [
     "nix-command"
@@ -130,5 +152,4 @@
   users.defaultUserShell = pkgs.zsh;
 
   musnix.enable = true;
-
 }
