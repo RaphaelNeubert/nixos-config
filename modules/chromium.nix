@@ -39,7 +39,7 @@
       "cjpalhdlnbpafiamejdnhcphjbkeiagm" # ublock origin
       "mnjggcdmjocbbbhaepdhchncahnbgone" # sponsorblock
       "nngceckbapebfimnlniiiahkandclblb" # bitwarden
-      "akannjhnhbfgceibnngofjbnncmelcjg" # darkmode everywhere
+      #"akannjhnhbfgceibnngofjbnncmelcjg" # darkmode everywhere
     ];
   };
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
