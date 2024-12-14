@@ -18,23 +18,14 @@
     cert = "/home/raphael/.local/share/syncthing/cert.pem";
     settings = {
       devices = {
-        "desktop" = {
-          id = "FF3SHI5-O4NYBBQ-EYNGVON-NEOQI46-WEIHQBC-F445YVW-RMPZSTW-6APUUAO";
-        };
-        "desktop2" = {
-          id = "D64JSA7-G6XONB7-44CLFYB-G467FS4-44IOSI2-GEF7VXQ-ZFLZAZH-VE533QZ";
-        };
-        "desktop-gentoo" = {
-          id = "KFUAMOW-PU22UBP-BWA5H4Z-WHIJDKB-MN4SKPM-ZCUNNVL-TSFATLQ-NCLGLA4";
+        "laptop" = {
+          id = "NBIBOFA-WDPJGWW-UAGVRYA-7PLVFCU-SZ4MYL3-A2K4Q2Z-4V4H566-QNUV3AU";
         };
       };
       folders = {
         "tu" = {
           path = "/home/raphael/tu";
-          devices = [
-            "desktop"
-            "desktop-gentoo"
-          ];
+          devices = [ "laptop" ];
           versioning = {
             type = "staggered";
             params = {
@@ -45,10 +36,7 @@
         };
         "documents" = {
           path = "/home/raphael/documents";
-          devices = [
-            "desktop"
-            "desktop-gentoo"
-          ];
+          devices = [ "laptop" ];
           versioning = {
             type = "staggered";
             params = {
@@ -59,10 +47,7 @@
         };
         "fun" = {
           path = "/home/raphael/fun";
-          devices = [
-            "desktop"
-            "desktop-gentoo"
-          ];
+          devices = [ "laptop" ];
           versioning = {
             type = "staggered";
             params = {
@@ -72,7 +57,7 @@
           };
         };
       };
-
     };
   };
+  systemd.services.syncthing.environment.STNODEFAULTFOLDER = "true";
 }

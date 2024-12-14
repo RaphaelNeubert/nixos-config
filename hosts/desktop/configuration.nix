@@ -22,7 +22,7 @@
     #../../modules/gdm.nix
     ../../modules/tuigreet.nix
     ../../modules/chromium.nix
-    #./exclusive-modules/syncthing.nix
+    ./exclusive-modules/syncthing.nix
   ];
 
   # Bootloader.
