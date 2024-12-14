@@ -2,7 +2,12 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, inputs, ... }:
+{
+  config,
+  pkgs,
+  inputs,
+  ...
+}:
 
 {
   imports = [
@@ -62,9 +67,16 @@
   users.users.raphael = {
     isNormalUser = true;
     description = "Raphael Neubert";
-    extraGroups = [ "networkmanager" "wheel" "audio" "jackaudio"];
-    packages = with pkgs; [];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+      "audio"
+      "jackaudio"
+    ];
+    packages = with pkgs; [ ];
   };
+
+  security.sudo.wheelNeedsPassword = false;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -111,7 +123,6 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "24.11"; # Did you read the comment?
-
 
   nix.settings.experimental-features = [
     "nix-command"
