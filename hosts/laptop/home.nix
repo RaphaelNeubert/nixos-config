@@ -85,6 +85,7 @@
   };
   xdg.userDirs = {
     download = "${config.home.homeDirectory}/downloads";
+    desktop = "${config.home.homeDirectory}/desktop";
     documents = "${config.home.homeDirectory}/documents";
     pictures = "${config.home.homeDirectory}/pictures";
     videos = "${config.home.homeDirectory}/videos";
