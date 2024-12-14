@@ -8,7 +8,8 @@
   environment.systemPackages = with pkgs; [
     #chromium
     (chromium.override {
-      commandLineArgs = [ # not sure if these even get applied, chrome://flags seems to say no
+      commandLineArgs = [
+        # not sure if these even get applied, chrome://flags seems to say no
         "--enable-features=VaapiVideoDecodeLinuxGL"
         "--ignore-gpu-blocklist"
         "--enable-zero-copy"
@@ -38,7 +39,8 @@
       "cjpalhdlnbpafiamejdnhcphjbkeiagm" # ublock origin
       "mnjggcdmjocbbbhaepdhchncahnbgone" # sponsorblock
       "nngceckbapebfimnlniiiahkandclblb" # bitwarden
+      "akannjhnhbfgceibnngofjbnncmelcjg" # darkmode everywhere
     ];
   };
-  environment.sessionVariables.NIXOS_OZONE_WL = "1"; # fixed the flickering
+  environment.sessionVariables.NIXOS_OZONE_WL = "1";
 }
