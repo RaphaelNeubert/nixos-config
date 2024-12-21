@@ -34,5 +34,6 @@
     qimgv
     bitwarden-cli
     direnv
+    wgetpaste
   ];
 }
