@@ -15,14 +15,16 @@
       enable = true;
       plugins = [
         "git"
-	"vi-mode"
+        "vi-mode"
       ];
       theme = "robbyrussell";
     };
     initExtra = ''
-	    VI_MODE_SET_CURSOR=true
+      	    VI_MODE_SET_CURSOR=true
     '';
 
-
   };
+  programs.direnv.enable = true;
+  programs.direnv.nix-direnv.enable = true;
+  programs.direnv.enableZshIntegration = true;
 }
