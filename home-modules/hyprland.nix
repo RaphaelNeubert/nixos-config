@@ -29,6 +29,7 @@
         layout = "master";
       };
       input = {
+        kb_layout = "us, de";
         kb_options = "caps:swapescape, altwin:swap_alt_win";
         repeat_rate = 50;
         repeat_delay = 300;
@@ -43,6 +44,7 @@
           "$mod SHIFT, C, killactive,"
           "$mod CTRL, delete, exit,"
           "$mod, Q, exec, hyprlock --immediate"
+          "$mod SHIFT, L, exec, hyprctl switchxkblayout current next"
 
           "$mod, W, exec, chromium --disable-gpu-compositing"
           "$mod, V, exec, $terminal -e pulsemixer"
