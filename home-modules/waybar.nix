@@ -64,9 +64,8 @@
 
         "network" = {
           interval = 1;
-          format = " {bandwidthUpBytes}  {bandwidthDownBytes}";
+          format = " {bandwidthUpBytes:>}  {bandwidthDownBytes:>}";
           #format-wifi = "  {signalStrength}%";
-
         };
         "network#signal" = {
           interval = 15;
