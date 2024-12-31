@@ -100,6 +100,7 @@
       misc = {
         enable_swallow = true;
         swallow_regex = "^(kitty)$";
+        swallow_exception_regex = "^(?!zathura|xournalpp).*";
 
         disable_hyprland_logo = true;
       };
