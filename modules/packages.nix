@@ -35,5 +35,6 @@
     bitwarden-cli
     direnv
     wgetpaste
+    nix-index
   ];
 }
