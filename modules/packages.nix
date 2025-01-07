@@ -36,5 +36,6 @@
     direnv
     wgetpaste
     nix-index
+    lsof
   ];
 }
