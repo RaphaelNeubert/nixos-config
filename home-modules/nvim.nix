@@ -91,6 +91,7 @@
         servers = {
           jedi_language_server.enable = true; # python
           nixd.enable = true; # nix
+          ccls.enable = true; # c/cpp
         };
       };
       web-devicons = {
