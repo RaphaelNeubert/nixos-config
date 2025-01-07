@@ -8,6 +8,6 @@
     grep = "grep --color=auto";
     diff = "diff --color=auto";
 
-    nnenv = ". ~/tu/env/bin/activate";
+    nnenv = "nix-shell ~/tu/shell.nix";
   };
 }
