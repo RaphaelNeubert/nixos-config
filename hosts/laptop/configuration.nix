@@ -21,6 +21,7 @@
     #../../modules/gdm.nix
     ../../modules/tuigreet.nix
     ../../modules/chromium.nix
+    ../../modules/appimage.nix
     ./exclusive-modules/syncthing.nix
   ];
 
@@ -120,6 +121,10 @@
     "nix-command"
     "flakes"
   ];
+
+  nix.extraOptions = ''
+    trusted-users = root raphael
+  '';
 
   home-manager = {
     extraSpecialArgs = {
