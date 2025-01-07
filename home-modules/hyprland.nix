@@ -44,7 +44,7 @@
           "$mod SHIFT, C, killactive,"
           "$mod CTRL, delete, exit,"
           "$mod, Q, exec, hyprlock --immediate"
-          "$mod SHIFT, L, exec, hyprctl switchxkblayout current next"
+          "$mod, S, exec, hyprctl switchxkblayout current next"
 
           "$mod, W, exec, chromium --disable-gpu-compositing"
           "$mod, V, exec, $terminal -e pulsemixer"
