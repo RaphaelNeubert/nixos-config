@@ -91,6 +91,7 @@
     wineasio
     jack2
     qjackctl
+    guitarix
   ];
   programs.steam.enable = true;
 
