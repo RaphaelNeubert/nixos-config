@@ -90,6 +90,17 @@
     music = "${config.home.homeDirectory}/music";
   };
 
+  xdg.mimeApps = {
+    enable = true;
+    defaultApplications = {
+      "x-scheme-handler/http" = [ "chromium-browser.desktop" ];
+      "x-scheme-handler/https" = [ "chromium-browser.desktop" ];
+      "text/html" = [ "chromium.desktop" ];
+      "application/pdf" = [ "org.pwmt.zathura.desktop" ];
+      "video/*" = [ "mpv.desktop" ];
+    };
+  };
+
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
