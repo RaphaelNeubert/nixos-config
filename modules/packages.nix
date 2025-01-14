@@ -37,5 +37,9 @@
     wgetpaste
     nix-index
     lsof
+    # basic developement things
+    gcc
+    gnumake
+    bear
   ];
 }
