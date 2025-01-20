@@ -125,6 +125,9 @@
       vimtex = {
         enable = true;
       };
+      gitsigns = {
+        enable = true;
+      };
     };
 
   };
