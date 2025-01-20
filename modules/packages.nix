@@ -37,5 +37,6 @@
     wgetpaste
     nix-index
     lsof
+    usbutils
   ];
 }
