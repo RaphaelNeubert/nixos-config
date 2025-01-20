@@ -29,7 +29,8 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  boot.initrd.luks.devices."luks-a8dc81ea-f161-47cb-a12a-544a45cda60c".device = "/dev/disk/by-uuid/a8dc81ea-f161-47cb-a12a-544a45cda60c";
+  boot.initrd.luks.devices."luks-a8dc81ea-f161-47cb-a12a-544a45cda60c".device =
+    "/dev/disk/by-uuid/a8dc81ea-f161-47cb-a12a-544a45cda60c";
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
@@ -138,4 +139,15 @@
 
   programs.zsh.enable = true;
   users.defaultUserShell = pkgs.zsh;
+
+  # fingerprint sensor
+  systemd.services.fprintd = {
+    wantedBy = [ "multi-user.target" ];
+    serviceConfig.Type = "simple";
+  };
+  services.fprintd.enable = true;
+  #services.fprintd.package = pkgs.fprintd-tod;
+  #services.fprintd.tod.enable = true;
+
+  #services.fprintd.tod.driver = pkgs.libfprint-2-tod1-vfs0090;
 }
