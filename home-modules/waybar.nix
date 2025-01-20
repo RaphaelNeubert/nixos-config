@@ -72,11 +72,11 @@
           format-wifi = "{icon}";
           format-ethernet = " ";
           format-icons = [
-            "󰤯 "
+            ""
             "󰤟 "
             "󰤢 "
             "󰤢 "
-            "󰤨 "
+            ""
           ];
           tooltip-format-wifi = "{signalStrength}% | {ipaddr}";
           tooltip-format-ethernet = "{ipaddr}";
