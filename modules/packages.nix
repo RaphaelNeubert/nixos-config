@@ -38,9 +38,10 @@
     nix-index
     lsof
     usbutils
-    # basic developement things
+    ### basic developement things
     gcc
     gnumake
     bear
+    ###
   ];
 }

@@ -92,6 +92,7 @@
     jack2
     qjackctl
     guitarix
+    prismlauncher
   ];
   programs.steam.enable = true;
 
