@@ -43,5 +43,6 @@
     gnumake
     bear
     ###
+    anki-bin
   ];
 }
