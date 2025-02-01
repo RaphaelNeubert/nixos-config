@@ -124,6 +124,7 @@
       };
       vimtex = {
         enable = true;
+        texlivePackage = pkgs.texlive.combined.scheme-full;
       };
       gitsigns = {
         enable = true;
