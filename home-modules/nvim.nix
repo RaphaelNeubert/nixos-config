@@ -22,6 +22,17 @@
 
     colorschemes.gruvbox.enable = true;
 
+    extraPlugins = [
+      (pkgs.vimUtils.buildVimPlugin {
+        name = "gruber-darker";
+        src = pkgs.fetchFromGitHub {
+          owner = "blazkowolf";
+          repo = "gruber-darker.nvim";
+          rev = "a2dda61d9c1225e16951a51d6b89795b0ac35cd6";
+          hash = "sha256-dMs2gdzhS8DLg6P0+msJ+cYluV9LoXE5cW3rI2i+tus=";
+        };
+      })
+    ];
     clipboard.register = "unnamedplus";
 
     globals.mapleader = " ";
