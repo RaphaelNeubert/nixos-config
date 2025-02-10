@@ -103,6 +103,9 @@
           jedi_language_server.enable = true; # python
           nixd.enable = true; # nix
           ccls.enable = true; # c/cpp
+          ltex.enable = true; # latex, markdown, bibtex...
+          ltex.package = pkgs.ltex-ls;
+          ltex.settings.language = "en-GB";
         };
       };
       web-devicons = {
