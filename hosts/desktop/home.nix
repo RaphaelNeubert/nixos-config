@@ -7,7 +7,7 @@
   home.homeDirectory = "/home/raphael";
 
   imports = [
-    ../../home-modules/waybar.nix
+    ../../home-modules/waybar/waybar.nix
     ../../home-modules/hyprland.nix
     ../../home-modules/hyprlock.nix
     ../../home-modules/nvim.nix
