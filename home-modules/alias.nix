@@ -8,6 +8,8 @@
     grep = "grep --color=auto";
     diff = "diff --color=auto";
 
+    cpwd = "pwd | wl-copy";
+
     nnenv = "nix-shell ~/tu/shell.nix";
   };
 }
