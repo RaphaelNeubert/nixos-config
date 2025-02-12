@@ -20,6 +20,7 @@
           "wireplumber"
           "memory"
           "cpu"
+          "hyprland/language"
           "network#signal"
           "bluetooth"
         ];
@@ -32,10 +33,6 @@
             active = " 󱎴";
             default = "󰍹";
           };
-          "hyprland/window" = {
-            seperate-outputs = true;
-          };
-
           #persistent-workspaces = {
           #        "1" = [ ];
           #        "2" = [ ];
@@ -47,6 +44,14 @@
           #        "8" = [ ];
           #        "9" = [ ];
           #};
+        };
+        "hyprland/window" = {
+          seperate-outputs = true;
+        };
+
+        "hyprland/language" = {
+          format-en = "EN";
+          format-de = "DE";
         };
         "clock" = {
           interval = 1;
