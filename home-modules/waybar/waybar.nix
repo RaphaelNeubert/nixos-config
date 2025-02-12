@@ -8,7 +8,10 @@
         height = 34;
         layer = "top";
         spacing = 16;
-        modules-left = [ "hyprland/workspaces" ];
+        modules-left = [
+          "hyprland/workspaces"
+          "hyprland/window"
+        ];
         modules-center = [ "clock" ];
         modules-right = [
           "network"
@@ -29,19 +32,22 @@
             active = " 󱎴";
             default = "󰍹";
           };
+          "hyprland/window" = {
+            seperate-outputs = true;
+          };
 
+          #persistent-workspaces = {
+          #        "1" = [ ];
+          #        "2" = [ ];
+          #        "3" = [ ];
+          #        "4" = [ ];
+          #        "5" = [ ];
+          #        "6" = [ ];
+          #        "7" = [ ];
+          #        "8" = [ ];
+          #        "9" = [ ];
+          #};
         };
-        #persistent-workspaces = {
-        #        "1" = [ ];
-        #        "2" = [ ];
-        #        "3" = [ ];
-        #        "4" = [ ];
-        #        "5" = [ ];
-        #        "6" = [ ];
-        #        "7" = [ ];
-        #        "8" = [ ];
-        #        "9" = [ ];
-        #};
         "clock" = {
           interval = 1;
           format = "  {:%H:%M:%S    %d %b}";

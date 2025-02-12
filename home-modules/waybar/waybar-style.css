@@ -1,11 +1,11 @@
 * {
 	/* `otf-font-awesome` is required to be installed for icons */
 	font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
-	font-size: 13px;
+	font-size: 12px;
 }
 
 window#waybar {
-	background-color: rgba(43, 48, 59, 0.5);
+	background-color: rgba(50, 50, 50, 0.5);
 	color: #ffffff;
 	transition-property: background-color;
 	transition-duration: .5s;
@@ -15,7 +15,8 @@ window#waybar {
 }
 #workspaces button.active {
 	background-color: #535454;
-	color: #ecd3a0;
+	/* color: #ecd3a0; */
+	color: rgba(70, 255, 70, 0.8);
 	/*
 	padding-left: 3px;
 	padding-right: 3px;
