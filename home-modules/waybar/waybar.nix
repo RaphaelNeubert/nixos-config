@@ -84,9 +84,7 @@
           format-ethernet = " ";
           format-icons = [
             ""
-            "󰤟 "
-            "󰤢 "
-            "󰤢 "
+            ""
             ""
           ];
           tooltip-format-wifi = "{signalStrength}% | {ipaddr}";
@@ -101,16 +99,17 @@
         };
         "memory" = {
           interval = 10;
-          format = "  {percentage}%";
+          format = " {percentage}%";
         };
         "cpu" = {
           interval = 10;
-          format = "  {usage}%";
+          format = " {usage}%";
         };
         "wireplumber" = {
           format = "{icon} {volume}%";
-          format-muted = "";
+          format-muted = "";
           format-icons = [
+            ""
             " "
             " "
           ];
@@ -122,8 +121,8 @@
             critical = 20;
           };
           format = "{icon} {capacity}%";
-          format-charging = " {capacity}%";
-          format-plugged = " {capacity}%";
+          format-charging = "{capacity}%";
+          format-plugged = "{capacity}%";
           format-icons = [
             ""
             ""
