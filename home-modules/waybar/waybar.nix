@@ -110,8 +110,8 @@
           format-muted = "";
           format-icons = [
             ""
-            " "
-            " "
+            ""
+            ""
           ];
         };
         "battery" = {
