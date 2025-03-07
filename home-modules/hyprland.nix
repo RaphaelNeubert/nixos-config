@@ -29,8 +29,8 @@
         layout = "master";
         #"col.active_border" = "rgba(ff453aee) rgba(ff9f0aee) 45deg"; #sunset
         #"col.active_border" = "rgba(cc0000ee) rgba(ff6600ee) 45deg"; # magma burst
-        #"col.active_border" = "rgba(33ccffee) rgba(00ff99ee) 45deg"; # cyan green
-        "col.active_border" = "rgba(00ffffff) rgba(9933ffff) 45deg"; # aurora glow
+        "col.active_border" = "rgba(33ccffee) rgba(00ff99ee) 45deg"; # cyan green
+        #"col.active_border" = "rgba(00ffffff) rgba(9933ffff) 45deg"; # aurora glow
       };
       input = {
         kb_layout = "us, de";
