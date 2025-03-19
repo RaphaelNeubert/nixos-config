@@ -157,6 +157,12 @@
       gitsigns = {
         enable = true;
       };
+      render-markdown = {
+        enable = true;
+      };
+      markdown-preview = {
+        enable = true;
+      };
     };
 
   };
