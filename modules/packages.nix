@@ -44,5 +44,7 @@
     bear
     ###
     anki-bin
+    vifm
+    bc
   ];
 }
