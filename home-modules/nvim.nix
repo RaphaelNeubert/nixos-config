@@ -105,7 +105,7 @@
           ccls.enable = true; # c/cpp
           ltex.enable = true; # latex, markdown, bibtex...
           ltex.package = pkgs.ltex-ls;
-          ltex.settings.language = "en-GB";
+          ltex.settings.language = "en-US";
         };
       };
       web-devicons = {
