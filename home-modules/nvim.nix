@@ -58,6 +58,22 @@
         action = "<cmd>LazyGit<cr>";
         options.desc = "[L]azy [G]it";
       }
+      {
+        key = "<Tab>";
+        action = " <cmd>lua require('luasnip').jump(1)<cr>";
+        mode = [
+          "i"
+          "s"
+        ];
+      }
+      {
+        key = "<S-Tab>";
+        action = " <cmd>lua require('luasnip').jump(-1)<cr>";
+        mode = [
+          "i"
+          "s"
+        ];
+      }
     ];
 
     plugins = {
@@ -153,6 +169,18 @@
       vimtex = {
         enable = true;
         texlivePackage = pkgs.texlive.combined.scheme-full;
+      };
+      luasnip = {
+        enable = true;
+        settings = {
+          enable_autosnippets = true;
+        };
+        fromLua = [
+          { }
+          {
+            paths = ./nvim-snippets;
+          }
+        ];
       };
       gitsigns = {
         enable = true;
