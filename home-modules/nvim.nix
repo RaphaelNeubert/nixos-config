@@ -58,6 +58,33 @@
         action = "<cmd>LazyGit<cr>";
         options.desc = "[L]azy [G]it";
       }
+
+      # Harpoon
+      {
+        key = "<leader>a";
+        action.__raw = "function() require('harpoon'):list():add() end";
+      }
+      {
+        key = "<leader>e";
+        action.__raw = "function() require('harpoon').ui:toggle_quick_menu(require('harpoon'):list()) end";
+      }
+      {
+        key = "<C-j>";
+        action.__raw = "function() require('harpoon'):list():select(1) end";
+      }
+      {
+        key = "<C-k>";
+        action.__raw = "function() require('harpoon'):list():select(2) end";
+      }
+      {
+        key = "<C-l>";
+        action.__raw = "function() require('harpoon'):list():select(3) end";
+      }
+      {
+        key = "<C-m>";
+        action.__raw = "function() require('harpoon'):list():select(4) end";
+      }
+      # Luasnip
       {
         key = "<Tab>";
         action = " <cmd>lua require('luasnip').jump(1)<cr>";
@@ -122,6 +149,7 @@
           ltex.enable = true; # latex, markdown, bibtex...
           ltex.package = pkgs.ltex-ls;
           ltex.settings.language = "en-US";
+          lua_ls.enable = true;
         };
       };
       web-devicons = {
@@ -152,16 +180,6 @@
       harpoon = {
         enable = true;
         enableTelescope = true;
-        keymaps = {
-          toggleQuickMenu = "<leader>e";
-          addFile = "<leader>a";
-          navFile = {
-            "1" = "<C-j>";
-            "2" = "<C-k>";
-            "3" = "<C-l>";
-            "4" = "<C-m>";
-          };
-        };
       };
       lazygit = {
         enable = true;
