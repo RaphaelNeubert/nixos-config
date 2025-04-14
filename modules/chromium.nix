@@ -32,6 +32,7 @@
       # 2 = Do not allow any site to show desktop notifications
       # 3 = Ask every time a site wants to show desktop notifications
       "DefaultNotificationSetting" = 2;
+      "ExtensionManifestV2Availability" = 2;
     };
 
     # Install extensions
