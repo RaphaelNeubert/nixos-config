@@ -46,5 +46,7 @@
     anki-bin
     vifm
     bc
+    man-pages
+    man-pages-posix
   ];
 }
