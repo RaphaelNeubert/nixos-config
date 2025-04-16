@@ -103,7 +103,7 @@
 
       misc = {
         new_window_takes_over_fullscreen = 1;
-        enable_swallow = true;
+        enable_swallow = false;
         swallow_regex = "^(kitty)$";
         swallow_exception_regex = "^(?!zathura|xournalpp).*";
 
