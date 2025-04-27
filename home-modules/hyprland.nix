@@ -41,6 +41,10 @@
           natural_scroll = false;
         };
       };
+      "device" = {
+        name = "wacom-intuos-pt-s-pen";
+        output = "DVI-D-1";
+      };
       bind =
         [
           "$mod SHIFT, Return, exec, $terminal"
