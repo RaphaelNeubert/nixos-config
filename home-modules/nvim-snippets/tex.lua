@@ -22,6 +22,7 @@ return {
 		t("$"),
 		i(1),
 		t("$"),
+		i(0),
 		-- d(2, space_if_needed, {}),
 	}),
 	s({ trig = "sr", wordTrig = false, snippetType = "autosnippet" }, {

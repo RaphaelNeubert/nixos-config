@@ -87,7 +87,7 @@
       # Luasnip
       {
         key = "<Tab>";
-        action = " <cmd>lua require('luasnip').jump(1)<cr>";
+        action.__raw = "function() require('luasnip').jump(1) end";
         mode = [
           "i"
           "s"
@@ -95,7 +95,7 @@
       }
       {
         key = "<S-Tab>";
-        action = " <cmd>lua require('luasnip').jump(-1)<cr>";
+        action.__raw = "function() require('luasnip').jump(-1) end";
         mode = [
           "i"
           "s"
