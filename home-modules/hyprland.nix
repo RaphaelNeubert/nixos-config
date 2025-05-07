@@ -53,7 +53,7 @@
           "$mod CTRL, delete, exit,"
           "$mod, Q, exec, hyprlock --immediate"
           "$mod, S, exec, hyprctl switchxkblayout current next"
-
+          "$mod SHIFT, S, toggleswallow"
           "$mod, W, exec, chromium --disable-gpu-compositing"
           "$mod, V, exec, $terminal -e pulsemixer"
           ", Print, exec, grimblast copy area"
@@ -107,7 +107,7 @@
 
       misc = {
         new_window_takes_over_fullscreen = 1;
-        enable_swallow = false;
+        enable_swallow = true;
         swallow_regex = "^(kitty)$";
         swallow_exception_regex = "^(?!zathura|xournalpp).*";
 
