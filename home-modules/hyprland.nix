@@ -32,6 +32,10 @@
         "col.active_border" = "rgba(33ccffee) rgba(00ff99ee) 45deg"; # cyan green
         #"col.active_border" = "rgba(00ffffff) rgba(9933ffff) 45deg"; # aurora glow
       };
+      master = {
+        inherit_fullscreen = true;
+        new_status = "master";
+      };
       input = {
         kb_layout = "us, de";
         kb_options = "caps:swapescape, altwin:swap_alt_win";
