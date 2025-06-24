@@ -30,6 +30,8 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
+  boot.kernelModules = [ "i2c-dev" ];
+
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
@@ -73,6 +75,7 @@
       "wheel"
       "audio"
       "jackaudio"
+      "i2c"
     ];
     packages = with pkgs; [ ];
   };
@@ -93,6 +96,7 @@
     qjackctl
     guitarix
     prismlauncher
+    ddcutil
   ];
   programs.steam.enable = true;
 

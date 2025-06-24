@@ -48,5 +48,6 @@
     bc
     man-pages
     man-pages-posix
+    eduvpn-client
   ];
 }
