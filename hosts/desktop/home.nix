@@ -10,6 +10,7 @@
     ../../home-modules/waybar/waybar.nix
     ../../home-modules/hyprland.nix
     ../../home-modules/hyprlock.nix
+    ../../home-modules/hypridle.nix
     ../../home-modules/nvim.nix
     ../../home-modules/alias.nix
     ../../home-modules/zsh.nix
