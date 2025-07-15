@@ -21,6 +21,7 @@
         ",preferred,auto,1"
         "DVI-D-2,preferred,auto-left,1"
         "HDMI-A-1,preferred,auto-right,1"
+        # "HDMI-A-1,preferred,auto-right,1, mirror, <mon-name>" # carefull no rerendering, this mon will be same res as the one its mirroring
       ];
       general = {
         gaps_in = 5;
