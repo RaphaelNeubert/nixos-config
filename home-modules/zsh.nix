@@ -19,7 +19,7 @@
       ];
       theme = "robbyrussell";
     };
-    initExtra = ''
+    initContent = ''
       	    VI_MODE_SET_CURSOR=true
     '';
 
