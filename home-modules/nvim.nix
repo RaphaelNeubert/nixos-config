@@ -8,7 +8,7 @@
 {
   imports = [
     #nixvim.homeManagerModules.nixvim
-    inputs.nixvim.homeManagerModules.nixvim
+    inputs.nixvim.homeModules.nixvim
 
   ];
   #home.packages = with pkgs; [
