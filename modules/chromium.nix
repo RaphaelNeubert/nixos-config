@@ -13,6 +13,7 @@
         "--enable-features=VaapiVideoDecodeLinuxGL"
         "--ignore-gpu-blocklist"
         "--enable-zero-copy"
+        "--disable-features=ExtensionManifestV2Unsupported,ExtensionManifestV2Disabled"
       ];
       enableWideVine = true;
 
