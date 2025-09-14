@@ -130,6 +130,7 @@
   home-manager = {
     extraSpecialArgs = {
       inherit inputs;
+      device = "laptop";
     };
     users = {
       "raphael" = import ./home.nix;

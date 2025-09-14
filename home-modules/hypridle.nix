@@ -1,5 +1,14 @@
-{ config, pkgs, ... }:
-
+{
+  config,
+  pkgs,
+  device,
+  ...
+}:
+let
+  isLaptop = device == "laptop";
+  lockTimeout = if isLaptop then 900 else 3600;
+  dpmsTimeout = if isLaptop then 1200 else 1800;
+in
 {
   services.hypridle = {
     enable = true;
@@ -12,11 +21,11 @@
 
       listener = [
         {
-          timeout = 900;
+          timeout = lockTimeout;
           on-timeout = "hyprlock";
         }
         {
-          timeout = 1200;
+          timeout = dpmsTimeout;
           on-timeout = "hyprctl dispatch dpms off";
           on-resume = "hyprctl dispatch dpms on";
         }
