@@ -51,5 +51,35 @@
           inputs.home-manager.nixosModules.default
         ];
       };
+      homeConfigurations = {
+        desktop = inputs.home-manager.lib.homeManagerConfiguration {
+          pkgs = import nixpkgs { system = "x86_64-linux"; };
+          modules = [
+            ./hosts/desktop/home.nix
+          ];
+          extraSpecialArgs = {
+            inherit inputs;
+            device = "desktop";
+          };
+        };
+
+        desktop2 = inputs.home-manager.lib.homeManagerConfiguration {
+          pkgs = import nixpkgs { system = "x86_64-linux"; };
+          modules = [ ./hosts/desktop2/home.nix ];
+          extraSpecialArgs = {
+            inherit inputs;
+            device = "desktop2";
+          };
+        };
+
+        laptop = inputs.home-manager.lib.homeManagerConfiguration {
+          pkgs = import nixpkgs { system = "x86_64-linux"; };
+          modules = [ ./hosts/laptop/home.nix ];
+          extraSpecialArgs = {
+            inherit inputs;
+            device = "laptop";
+          };
+        };
+      };
     };
 }
