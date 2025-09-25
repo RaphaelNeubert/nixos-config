@@ -101,6 +101,12 @@
           "s"
         ];
       }
+      {
+        key = "<Esc><Esc>";
+        mode = [ "t" ];
+        action = "<C-\\><C-n>";
+        options.desc = "Exit terminal mode";
+      }
     ];
 
     plugins = {
@@ -211,6 +217,13 @@
       };
       markdown-preview = {
         enable = true;
+      };
+      toggleterm = {
+        enable = true;
+        settings = {
+          direction = "float";
+          open_mapping = "[[<c-\\>]]";
+        };
       };
     };
 
