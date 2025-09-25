@@ -77,6 +77,7 @@
       "audio"
       "jackaudio"
       "i2c"
+      "dialout"
     ];
     packages = with pkgs; [ ];
   };
@@ -119,8 +120,8 @@
   services.openssh.enable = true;
 
   # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
-  # networking.firewall.allowedUDPPorts = [ ... ];
+  networking.firewall.allowedTCPPorts = [ 1883 ];
+  networking.firewall.allowedUDPPorts = [ 1883 ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
 
