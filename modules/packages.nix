@@ -21,7 +21,7 @@
     grimblast
     wl-clipboard # like xclip
     wlr-randr # like xrandr
-    rofi-wayland
+    rofi
     nixfmt-rfc-style
     brave
     ripgrep # for neovim - telescope
