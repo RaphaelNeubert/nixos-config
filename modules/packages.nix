@@ -50,5 +50,6 @@
     man-pages-posix
     eduvpn-client
     home-manager
+    localsend
   ];
 }
