@@ -10,8 +10,8 @@
       #pkgs.qt6.qtbase
       pkgs.qt6.qtwayland
       pkgs.wayland
-
       pkgs.zstd
+      pkgs.xorg.xcbutilcursor
     ];
   };
 }
