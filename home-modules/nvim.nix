@@ -85,22 +85,22 @@
         action.__raw = "function() require('harpoon'):list():select(4) end";
       }
       # Luasnip
-      {
-        key = "<Tab>";
-        action.__raw = "function() require('luasnip').jump(1) end";
-        mode = [
-          "i"
-          "s"
-        ];
-      }
-      {
-        key = "<S-Tab>";
-        action.__raw = "function() require('luasnip').jump(-1) end";
-        mode = [
-          "i"
-          "s"
-        ];
-      }
+      #{
+      #  key = "<Tab>";
+      #  action.__raw = "function() require('luasnip').jump(1) end";
+      #  mode = [
+      #    "i"
+      #    "s"
+      #  ];
+      #}
+      #{
+      #  key = "<S-Tab>";
+      #  action.__raw = "function() require('luasnip').jump(-1) end";
+      #  mode = [
+      #    "i"
+      #    "s"
+      #  ];
+      #}
       {
         key = "<Esc><Esc>";
         mode = [ "t" ];
