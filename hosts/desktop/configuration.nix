@@ -31,6 +31,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   boot.kernelModules = [ "i2c-dev" ];
+  boot.supportedFilesystems = [ "ntfs" ];
 
   networking.hostName = "rade"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
