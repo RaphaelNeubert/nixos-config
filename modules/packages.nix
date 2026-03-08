@@ -51,5 +51,6 @@
     eduvpn-client
     home-manager
     localsend
+    uv
   ];
 }
