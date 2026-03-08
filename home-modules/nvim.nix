@@ -51,6 +51,15 @@
           "*.nix"
         ];
       }
+      {
+        command = "silent !black %";
+        event = [
+          "BufWritePost"
+        ];
+        pattern = [
+          "*.py"
+        ];
+      }
     ];
     keymaps = [
       {
