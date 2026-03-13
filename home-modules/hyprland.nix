@@ -34,7 +34,7 @@
         #"col.active_border" = "rgba(00ffffff) rgba(9933ffff) 45deg"; # aurora glow
       };
       master = {
-        inherit_fullscreen = true;
+        #inherit_fullscreen = true;
         new_status = "master";
       };
       input = {
@@ -50,52 +50,51 @@
         name = "wacom-intuos-pt-s-pen";
         output = "DVI-D-1";
       };
-      bind =
-        [
-          "$mod SHIFT, Return, exec, $terminal"
-          "$mod, P, exec, rofi -show drun"
-          "$mod SHIFT, C, killactive,"
-          "$mod CTRL, delete, exit,"
-          "$mod, Q, exec, hyprlock --immediate"
-          "$mod, S, exec, hyprctl switchxkblayout current next"
-          "$mod SHIFT, S, toggleswallow"
-          "$mod, W, exec, chromium --disable-gpu-compositing"
-          "$mod, V, exec, $terminal -e pulsemixer"
-          ", Print, exec, grimblast copy area"
+      bind = [
+        "$mod SHIFT, Return, exec, $terminal"
+        "$mod, P, exec, rofi -show drun"
+        "$mod SHIFT, C, killactive,"
+        "$mod CTRL, delete, exit,"
+        "$mod, Q, exec, hyprlock --immediate"
+        "$mod, S, exec, hyprctl switchxkblayout current next"
+        "$mod SHIFT, S, toggleswallow"
+        "$mod, W, exec, chromium --disable-gpu-compositing"
+        "$mod, V, exec, $terminal -e pulsemixer"
+        ", Print, exec, grimblast copy area"
 
-          "$mod, M, fullscreen, 1"
-          "$mod SHIFT, M, fullscreen, 0"
-          "$mod, F, togglefloating"
+        "$mod, M, fullscreen, 1"
+        "$mod SHIFT, M, fullscreen, 0"
+        "$mod, F, togglefloating"
 
-          "$mod, H, movefocus, l"
-          "$mod, L, movefocus, r"
-          "$mod, K, movefocus, u"
-          "$mod, J, movefocus, d"
+        "$mod, H, movefocus, l"
+        "$mod, L, movefocus, r"
+        "$mod, K, movefocus, u"
+        "$mod, J, movefocus, d"
 
-          "$mod SHIFT, H, movewindow, l"
-          "$mod SHIFT, L, movewindow, r"
-          "$mod SHIFT, K, movewindow, u"
-          "$mod SHIFT, J, movewindow, d"
+        "$mod SHIFT, H, movewindow, l"
+        "$mod SHIFT, L, movewindow, r"
+        "$mod SHIFT, K, movewindow, u"
+        "$mod SHIFT, J, movewindow, d"
 
-          "$mod SHIFT, comma, movecurrentworkspacetomonitor, l"
-          "$mod SHIFT, period, movecurrentworkspacetomonitor, r"
-        ]
-        ++ (
-          # workspaces
-          # binds $mod + [shift +] {1..9} to [move to] workspace {1..9}
-          builtins.concatLists (
-            builtins.genList (
-              i:
-              let
-                ws = i + 1;
-              in
-              [
-                "$mod, code:1${toString i}, workspace, ${toString ws}"
-                "$mod SHIFT, code:1${toString i}, movetoworkspace, ${toString ws}"
-              ]
-            ) 9
-          )
-        );
+        "$mod SHIFT, comma, movecurrentworkspacetomonitor, l"
+        "$mod SHIFT, period, movecurrentworkspacetomonitor, r"
+      ]
+      ++ (
+        # workspaces
+        # binds $mod + [shift +] {1..9} to [move to] workspace {1..9}
+        builtins.concatLists (
+          builtins.genList (
+            i:
+            let
+              ws = i + 1;
+            in
+            [
+              "$mod, code:1${toString i}, workspace, ${toString ws}"
+              "$mod SHIFT, code:1${toString i}, movetoworkspace, ${toString ws}"
+            ]
+          ) 9
+        )
+      );
       # l: inhibitor ressistant, e: repeat on hold
       bindle = [
         ", XF86MonBrightnessUp, exec, brightnessctl set 1%+"
@@ -111,7 +110,7 @@
       ];
 
       misc = {
-        new_window_takes_over_fullscreen = 1;
+        #new_window_takes_over_fullscreen = 1;
         enable_swallow = true;
         swallow_regex = "^(kitty)$";
         swallow_exception_regex = "^(?!zathura|xournalpp).*";
