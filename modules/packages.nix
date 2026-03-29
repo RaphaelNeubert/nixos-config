@@ -52,5 +52,6 @@
     home-manager
     localsend
     uv
+    bluetui
   ];
 }

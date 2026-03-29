@@ -96,6 +96,7 @@
           format-on = " ";
           format-connected = " {device_battery_percentage}%";
           on-click = "bluetoothctl connect 38:8F:30:82:6E:BE";
+          on-click-right = "kitty -e bluetui";
         };
         "memory" = {
           interval = 10;
