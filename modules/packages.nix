@@ -53,5 +53,7 @@
     localsend
     uv
     bluetui
+    file
+    fd
   ];
 }
