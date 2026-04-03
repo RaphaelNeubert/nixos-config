@@ -30,7 +30,8 @@
   boot.loader.grub.device = "/dev/sda";
   boot.loader.grub.useOSProber = true;
 
-  boot.initrd.luks.devices."luks-b9005e18-810c-4e1f-8fd8-7312cbc23c84".device = "/dev/disk/by-uuid/b9005e18-810c-4e1f-8fd8-7312cbc23c84";
+  boot.initrd.luks.devices."luks-b9005e18-810c-4e1f-8fd8-7312cbc23c84".device =
+    "/dev/disk/by-uuid/b9005e18-810c-4e1f-8fd8-7312cbc23c84";
   # Setup keyfile
   boot.initrd.secrets = {
     "/boot/crypto_keyfile.bin" = null;
@@ -38,8 +39,10 @@
 
   boot.loader.grub.enableCryptodisk = true;
 
-  boot.initrd.luks.devices."luks-63bbad80-65e7-4d9a-b38d-c9a8227a8ba7".keyFile = "/boot/crypto_keyfile.bin";
-  boot.initrd.luks.devices."luks-b9005e18-810c-4e1f-8fd8-7312cbc23c84".keyFile = "/boot/crypto_keyfile.bin";
+  boot.initrd.luks.devices."luks-63bbad80-65e7-4d9a-b38d-c9a8227a8ba7".keyFile =
+    "/boot/crypto_keyfile.bin";
+  boot.initrd.luks.devices."luks-b9005e18-810c-4e1f-8fd8-7312cbc23c84".keyFile =
+    "/boot/crypto_keyfile.bin";
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
