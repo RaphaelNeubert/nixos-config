@@ -92,14 +92,10 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     ardour
-    #pipewire.jack
-    neural-amp-modeler-lv2
     wineasio
-    jack2
-    qjackctl
-    guitarix
     prismlauncher
     ddcutil
+    qpwgraph
   ];
   programs.steam.enable = true;
 
