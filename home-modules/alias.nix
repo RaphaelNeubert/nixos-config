@@ -11,5 +11,8 @@
     cpwd = "pwd | wl-copy";
 
     nnenv = "nix-shell ~/tu/shell.nix";
+
+    emptyflake = "cp -i /etc/nixos/flake-templates/empty/flake.nix .";
+    uvenv = "nix develop /etc/nixos/flake-templates/uv-flake";
   };
 }
