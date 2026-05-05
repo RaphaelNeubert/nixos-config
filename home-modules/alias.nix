@@ -4,7 +4,9 @@
     mv = "mv -iv";
     rm = "rm -vI";
     bc = "bc -ql";
-    ls = "ls -hN --color=auto --group-directories-first";
+    #ls = "ls -hN --color=auto --group-directories-first";
+    ls = "eza";
+    cat = "bat";
     grep = "grep --color=auto";
     diff = "diff --color=auto";
 

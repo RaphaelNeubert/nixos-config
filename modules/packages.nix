@@ -55,5 +55,9 @@
     bluetui
     file
     fd
+    eza
+    bat
+    zoxide
+    fzf
   ];
 }
