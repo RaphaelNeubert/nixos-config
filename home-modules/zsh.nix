@@ -17,7 +17,7 @@
         "git"
         "vi-mode"
       ];
-      theme = "robbyrussell";
+      theme = "eastwood";
     };
     initContent = ''
       	    VI_MODE_SET_CURSOR=true
@@ -27,4 +27,6 @@
   programs.direnv.enable = true;
   programs.direnv.nix-direnv.enable = true;
   programs.direnv.enableZshIntegration = true;
+
+  programs.zoxide.enableZshIntegration = true;
 }
