@@ -22,7 +22,7 @@
     wl-clipboard # like xclip
     wlr-randr # like xrandr
     rofi
-    nixfmt-rfc-style
+    nixfmt
     brave
     ripgrep # for neovim - telescope
     lazygit

@@ -11,7 +11,7 @@
       pkgs.qt6.qtwayland
       pkgs.wayland
       pkgs.zstd
-      pkgs.xorg.xcbutilcursor
+      pkgs.libxcb-cursor
     ];
   };
 }
