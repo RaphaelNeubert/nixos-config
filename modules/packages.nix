@@ -59,5 +59,6 @@
     bat
     zoxide
     fzf
+    opencode
   ];
 }
