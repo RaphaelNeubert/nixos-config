@@ -31,10 +31,16 @@
           packages = with pkgs; [
             zsh
             gcc.cc.lib
+            zlib
           ];
           shellHook = ''
-            export LD_LIBRARY_PATH="${pkgs.gcc.cc.lib}/lib:$LD_LIBRARY_PATH"
-            exec ${pkgs.zsh}/bin/zsh -i
+            export LD_LIBRARY_PATH="${
+              pkgs.lib.makeLibraryPath [
+                pkgs.zlib
+                pkgs.gcc.cc.lib
+              ]
+            }:$LD_LIBRARY_PATH"
+                        exec ${pkgs.zsh}/bin/zsh -i
           '';
         };
       });
