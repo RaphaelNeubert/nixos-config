@@ -55,7 +55,7 @@
         "$mod, P, exec, rofi -show drun"
         "$mod SHIFT, C, killactive,"
         "$mod CTRL, delete, exit,"
-        "$mod, Q, exec, hyprlock --immediate"
+        "$mod, Q, exec, hyprlock"
         "$mod, S, exec, hyprctl switchxkblayout current next"
         "$mod SHIFT, S, toggleswallow"
         "$mod, W, exec, chromium --disable-gpu-compositing"
