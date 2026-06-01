@@ -86,6 +86,7 @@
   environment.systemPackages = with pkgs; [
     acpi
     brightnessctl
+    lm_sensors
   ];
 
   fonts.packages = with pkgs; [
