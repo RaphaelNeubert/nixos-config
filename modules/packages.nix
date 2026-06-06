@@ -28,6 +28,7 @@
     lazygit
     qlcplus
     texlive.combined.scheme-full
+    ghostscript
     unzip
     swww # wallpaperd
     mpv

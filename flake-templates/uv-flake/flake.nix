@@ -32,12 +32,20 @@
             zsh
             gcc.cc.lib
             zlib
+            mesa
+            libGL
+            libglvnd
+            egl-wayland
           ];
           shellHook = ''
             export LD_LIBRARY_PATH="${
               pkgs.lib.makeLibraryPath [
                 pkgs.zlib
                 pkgs.gcc.cc.lib
+                pkgs.mesa
+                pkgs.libGL
+                pkgs.libglvnd
+                pkgs.egl-wayland
               ]
             }:$LD_LIBRARY_PATH"
                         exec ${pkgs.zsh}/bin/zsh -i
