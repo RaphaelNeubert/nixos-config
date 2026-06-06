@@ -61,5 +61,6 @@
     zoxide
     fzf
     opencode
+    inkscape
   ];
 }
