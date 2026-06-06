@@ -30,7 +30,7 @@
     texlive.combined.scheme-full
     ghostscript
     unzip
-    swww # wallpaperd
+    awww # wallpaperd
     mpv
     qimgv
     bitwarden-cli
