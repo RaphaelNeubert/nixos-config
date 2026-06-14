@@ -49,6 +49,7 @@
         modules = [
           ./hosts/laptop/configuration.nix
           inputs.home-manager.nixosModules.default
+          inputs.musnix.nixosModules.musnix
         ];
       };
       homeConfigurations = {

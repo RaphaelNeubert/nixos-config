@@ -74,6 +74,7 @@
       "networkmanager"
       "wheel"
       "dialout"
+      "audio"
     ];
     packages = with pkgs; [ ];
   };
@@ -87,6 +88,7 @@
     acpi
     brightnessctl
     lm_sensors
+    ardour_8
   ];
 
   fonts.packages = with pkgs; [
@@ -161,4 +163,6 @@
   #services.fprintd.tod.driver = pkgs.libfprint-2-tod1-vfs0090;
 
   documentation.dev.enable = true;
+
+  musnix.enable = true;
 }
