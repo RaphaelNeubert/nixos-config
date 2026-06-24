@@ -19,7 +19,7 @@
     ../../modules/pipewire.nix
     ../../modules/bluetooth.nix
     #../../modules/gdm.nix
-    ../../modules/tuigreet.nix
+    ../../modules/greetd.nix
     ../../modules/chromium.nix
     ../../modules/appimage.nix
     ./exclusive-modules/syncthing.nix
