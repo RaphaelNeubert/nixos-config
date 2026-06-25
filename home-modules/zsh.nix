@@ -10,7 +10,10 @@
     history = {
       size = 10000;
       path = "${config.xdg.dataHome}/zsh/history";
+      append = true;
+      share = false;
     };
+    setOptions = [ "INC_APPEND_HISTORY" ];
     oh-my-zsh = {
       enable = true;
       plugins = [
