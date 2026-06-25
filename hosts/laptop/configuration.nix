@@ -89,6 +89,7 @@
     brightnessctl
     lm_sensors
     ardour_8
+    hyprmon
   ];
 
   fonts.packages = with pkgs; [
