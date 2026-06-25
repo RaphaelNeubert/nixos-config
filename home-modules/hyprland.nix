@@ -60,7 +60,7 @@
         "$mod, S, exec, hyprctl switchxkblayout current next"
         "$mod SHIFT, S, toggleswallow"
         "$mod, W, exec, chromium --disable-gpu-compositing"
-        "$mod, V, exec, $terminal -e pulsemixer"
+        "$mod, V, exec, $terminal -e wiremix"
         ", Print, exec, grimblast copy area"
 
         "$mod, M, fullscreen, 1"

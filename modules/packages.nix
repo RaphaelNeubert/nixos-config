@@ -12,7 +12,7 @@
     tree
     htop
     btop
-    pulsemixer
+    wiremix
     wev
     git
     python3
