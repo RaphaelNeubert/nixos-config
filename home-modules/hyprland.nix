@@ -117,6 +117,7 @@
         swallow_exception_regex = "^(?!zathura|xournalpp).*";
 
         disable_hyprland_logo = true;
+        disable_splash_rendering = true;
       };
     };
   };
