@@ -55,6 +55,7 @@
         "$mod, P, exec, rofi -show drun"
         "$mod SHIFT, C, killactive,"
         "$mod CTRL, delete, exit,"
+        "$mod SHIFT, End, exec, systemctl poweroff"
         "$mod, Q, exec, hyprlock"
         "$mod, S, exec, hyprctl switchxkblayout current next"
         "$mod SHIFT, S, toggleswallow"
