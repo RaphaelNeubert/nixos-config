@@ -22,6 +22,7 @@
     ../../modules/greetd.nix
     ../../modules/chromium.nix
     ../../modules/appimage.nix
+    ../../modules/nix-ld.nix
     ./exclusive-modules/syncthing.nix
   ];
 
@@ -166,4 +167,5 @@
   documentation.dev.enable = true;
 
   musnix.enable = true;
+
 }
