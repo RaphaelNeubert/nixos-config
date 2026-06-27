@@ -160,6 +160,11 @@
   };
   services.fprintd.enable = true;
   security.pam.services.hyprlock.fprintAuth = true;
+  security.pam.services.sudo = {
+    fprintAuth = true;
+    # Prefer the normal sudo password prompt, but still allow fingerprint after a failed or empty password submission.
+    rules.auth.unix.order = config.security.pam.services.sudo.rules.auth.fprintd.order - 10;
+  };
   #services.fprintd.package = pkgs.fprintd-tod;
   #services.fprintd.tod.enable = true;
 
