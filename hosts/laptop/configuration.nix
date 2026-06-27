@@ -159,6 +159,7 @@
     serviceConfig.Type = "simple";
   };
   services.fprintd.enable = true;
+  security.pam.services.hyprlock.fprintAuth = true;
   #services.fprintd.package = pkgs.fprintd-tod;
   #services.fprintd.tod.enable = true;
 

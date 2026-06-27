@@ -4,6 +4,7 @@
   services.locate.enable = true;
   services.udev.packages = [ pkgs.qlcplus ];
   services.printing.enable = true;
+  services.fwupd.enable = true;
   services.avahi = {
     # for printer discovery
     enable = true;
