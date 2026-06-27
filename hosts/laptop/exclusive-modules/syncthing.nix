@@ -19,7 +19,7 @@
     settings = {
       devices = {
         "desktop" = {
-          id = "FF3SHI5-O4NYBBQ-EYNGVON-NEOQI46-WEIHQBC-F445YVW-RMPZSTW-6APUUAO";
+          id = "2AOXHBP-RX6YORV-TTPD3QW-AUBWGBG-P7VUCFH-2Z4OYSJ-KSFDGQK-2R7OCQO";
         };
         "desktop2" = {
           id = "D64JSA7-G6XONB7-44CLFYB-G467FS4-44IOSI2-GEF7VXQ-ZFLZAZH-VE533QZ";

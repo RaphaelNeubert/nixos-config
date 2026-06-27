@@ -14,8 +14,8 @@
     guiAddress = "0.0.0.0:8384";
     overrideDevices = true;
     overrideFolders = true;
-    key = "/home/raphael/.local/share/syncthing/key.pem";
-    cert = "/home/raphael/.local/share/syncthing/cert.pem";
+    #key = "/home/raphael/.local/share/syncthing/key.pem";
+    #cert = "/home/raphael/.local/share/syncthing/cert.pem";
     settings = {
       devices = {
         "laptop" = {
