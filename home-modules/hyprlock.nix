@@ -3,6 +3,16 @@
   programs.hyprlock = {
     enable = true;
     settings = {
+      auth = {
+        pam.enabled = true;
+        fingerprint = {
+          enabled = true;
+          ready_message = "Scan fingerprint to unlock";
+          present_message = "Scanning fingerprint...";
+          retry_delay = 250;
+        };
+      };
+
       general = {
         hide_cursor = true;
       };
