@@ -36,6 +36,20 @@
             libGL
             libglvnd
             egl-wayland
+            SDL2
+            libdecor
+            libxkbcommon
+            wayland
+            wayland-protocols
+            libx11
+            libxcursor
+            libxext
+            libxfixes
+            libxi
+            libxinerama
+            libxrandr
+            libxrender
+            libxscrnsaver
           ];
           shellHook = ''
             export LD_LIBRARY_PATH="${
@@ -46,6 +60,20 @@
                 pkgs.libGL
                 pkgs.libglvnd
                 pkgs.egl-wayland
+                pkgs.SDL2
+                pkgs.libdecor
+                pkgs.libxkbcommon
+                pkgs.wayland
+                pkgs.wayland-protocols
+                pkgs.libx11
+                pkgs.libxcursor
+                pkgs.libxext
+                pkgs.libxfixes
+                pkgs.libxi
+                pkgs.libxinerama
+                pkgs.libxrandr
+                pkgs.libxrender
+                pkgs.libxscrnsaver
               ]
             }:$LD_LIBRARY_PATH"
                         exec ${pkgs.zsh}/bin/zsh -i
