@@ -16,6 +16,7 @@
     ../../home-modules/zsh.nix
     ../../home-modules/zathura.nix
     ../../home-modules/kitty.nix
+    ../../home-modules/rocksmith.nix
   ];
 
   # This value determines the Home Manager release that your configuration is

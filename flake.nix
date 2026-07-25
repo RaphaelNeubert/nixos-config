@@ -16,6 +16,10 @@
     musnix = {
       url = "github:musnix/musnix";
     };
+    rocksmith-nix = {
+      url = "github:Daaboulex/rocksmith-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =

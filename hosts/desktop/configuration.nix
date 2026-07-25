@@ -10,6 +10,8 @@
 }:
 
 {
+  nixpkgs.overlays = [ inputs.rocksmith-nix.overlays.default ];
+
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
@@ -93,7 +95,6 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     ardour
-    wineasio
     prismlauncher
     ddcutil
     qpwgraph
@@ -143,6 +144,7 @@
   ];
 
   home-manager = {
+    useGlobalPkgs = true;
     extraSpecialArgs = {
       inherit inputs;
       device = "desktop";
