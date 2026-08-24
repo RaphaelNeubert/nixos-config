@@ -38,7 +38,8 @@
 
     # Install extensions
     extensions = [
-      "cjpalhdlnbpafiamejdnhcphjbkeiagm" # ublock origin
+      #"cjpalhdlnbpafiamejdnhcphjbkeiagm" # ublock origin
+      "ddkjiahejlhfcafbddmgiahcphecmpfh" # ublock origin lite
       "mnjggcdmjocbbbhaepdhchncahnbgone" # sponsorblock
       "nngceckbapebfimnlniiiahkandclblb" # bitwarden
       #"akannjhnhbfgceibnngofjbnncmelcjg" # darkmode everywhere
