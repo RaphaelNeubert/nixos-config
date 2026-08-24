@@ -30,6 +30,7 @@
         default = pkgs.mkShell {
           packages = with pkgs; [
             zsh
+            black
             gcc.cc.lib
             zlib
             mesa
@@ -50,6 +51,7 @@
             libxrandr
             libxrender
             libxscrnsaver
+            graphviz
           ];
           shellHook = ''
             export LD_LIBRARY_PATH="/run/opengl-driver/lib:${
