@@ -52,8 +52,12 @@
             libxrender
             libxscrnsaver
             graphviz
+            cacert
           ];
           shellHook = ''
+            export SSL_CERT_FILE="${pkgs.cacert}/etc/ssl/certs/ca-bundle.crt"
+            export NIX_SSL_CERT_FILE="${pkgs.cacert}/etc/ssl/certs/ca-bundle.crt"
+
             export LD_LIBRARY_PATH="/run/opengl-driver/lib:${
               pkgs.lib.makeLibraryPath [
                 pkgs.zlib
@@ -78,7 +82,8 @@
                 pkgs.libxscrnsaver
               ]
             }:$LD_LIBRARY_PATH"
-                        exec ${pkgs.zsh}/bin/zsh -i
+
+            exec ${pkgs.zsh}/bin/zsh -i
           '';
         };
       });
