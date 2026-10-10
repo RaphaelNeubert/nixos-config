@@ -83,7 +83,9 @@
               ]
             }:$LD_LIBRARY_PATH"
 
-            exec ${pkgs.zsh}/bin/zsh -i
+            if [[ $- == *i* ]]; then
+              exec ${pkgs.zsh}/bin/zsh -i
+            fi
           '';
         };
       });

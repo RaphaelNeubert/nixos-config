@@ -1,4 +1,32 @@
+{ pkgs, ... }:
+
+let
+  project-workspace = pkgs.writeShellApplication {
+    name = "project-workspace";
+    runtimeInputs = with pkgs; [
+      coreutils
+      hyprland
+      jq
+      kitty
+      nix
+      rofi
+      zsh
+    ];
+    text = builtins.readFile ../scripts/project-workspace.sh;
+  };
+in
 {
+  home.packages = [ project-workspace ];
+
+  xdg.desktopEntries.uvwork = {
+    name = "UV Project Workspace";
+    comment = "Open a project development workspace";
+    exec = "${project-workspace}/bin/project-workspace";
+    icon = "utilities-terminal";
+    terminal = false;
+    categories = [ "Development" ];
+  };
+
   home.shellAliases = {
     cp = "cp -iv";
     mv = "mv -iv";
@@ -16,5 +44,6 @@
 
     emptyflake = "cp -i /etc/nixos/flake-templates/empty/flake.nix .";
     uvenv = "nix develop /etc/nixos/flake-templates/uv-flake";
+    uvwork = "project-workspace";
   };
 }
