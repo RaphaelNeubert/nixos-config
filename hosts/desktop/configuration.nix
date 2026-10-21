@@ -98,8 +98,11 @@
     prismlauncher
     ddcutil
     qpwgraph
+    piper # to configure logitech mouse, requires ratbagd service
   ];
   programs.steam.enable = true;
+
+  services.ratbagd.enable = true; # for piper (logitech mouse)
 
   fonts.packages = with pkgs; [
     font-awesome
