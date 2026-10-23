@@ -64,5 +64,6 @@
     fzf
     opencode
     inkscape
+    lm_sensors
   ];
 }

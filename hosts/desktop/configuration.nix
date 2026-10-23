@@ -161,4 +161,6 @@
 
   musnix.enable = true;
 
+  programs.coolercontrol.enable = true;
+
 }
