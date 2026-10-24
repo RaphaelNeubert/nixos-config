@@ -68,6 +68,13 @@ hl.device({
     output = "DVI-D-1",
 })
 
+-- Keep app-requested maximization from taking windows out of the tiling layout.
+hl.window_rule({
+    name = "suppress-maximize-events",
+    match = { class = ".*" },
+    suppress_event = "maximize",
+})
+
 hl.bind(mod .. " + SHIFT + Return", hl.dsp.exec_cmd(terminal))
 hl.bind(mod .. " + P", hl.dsp.exec_cmd("rofi -show drun"))
 hl.bind(mod .. " + SHIFT + C", hl.dsp.window.close())
