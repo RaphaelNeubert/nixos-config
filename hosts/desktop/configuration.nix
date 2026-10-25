@@ -95,7 +95,12 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     ardour
-    prismlauncher
+    # OpenJDK 25 currently uses an older glibc loader incompatible with OpenAL.
+    (prismlauncher.override {
+      jdk25 = temurin-bin-25;
+      # SDL needs XInput2 for relative mouse capture under XWayland.
+      additionalLibs = [ libxi ];
+    })
     ddcutil
     qpwgraph
     piper # to configure logitech mouse, requires ratbagd service
