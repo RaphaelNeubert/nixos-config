@@ -63,6 +63,7 @@
     zoxide
     fzf
     opencode
+    codex
     inkscape
     lm_sensors
   ];
