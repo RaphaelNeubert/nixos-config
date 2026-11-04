@@ -29,7 +29,7 @@
     ripgrep # for neovim - telescope
     lazygit
     qlcplus
-    texlive.combined.scheme-full
+    texliveFull
     ghostscript
     unzip
     awww # wallpaperd

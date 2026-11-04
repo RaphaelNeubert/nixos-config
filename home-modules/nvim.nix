@@ -166,9 +166,9 @@
           #  enable = true; # c/cpp
           #  initOptions.cache.directory = "/tmp/ccls-cache";
           #};
-          ltex.enable = true; # latex, markdown, bibtex...
-          ltex.package = pkgs.ltex-ls;
-          ltex.settings.language = "en-US";
+          ltex_plus.enable = true; # latex, markdown, bibtex...
+          ltex_plus.package = pkgs.ltex-ls-plus;
+          ltex_plus.settings.ltex.language = "en-US";
           lua_ls.enable = true;
         };
       };
@@ -206,7 +206,7 @@
       };
       vimtex = {
         enable = true;
-        texlivePackage = pkgs.texlive.combined.scheme-full;
+        texlivePackage = pkgs.texliveFull;
       };
       luasnip = {
         enable = true;
