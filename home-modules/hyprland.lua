@@ -11,7 +11,7 @@ hl.monitor({
 })
 
 hl.monitor({
-    output = "DVI-D-2",
+    output = "DP-1",
     mode = "preferred",
     position = "auto-left",
     scale = 1,
