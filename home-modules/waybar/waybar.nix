@@ -3,6 +3,43 @@
 {
   programs.waybar = {
     enable = true;
+    # Waybar 0.15 still sends legacy dispatches; our Hyprland config uses Lua.
+    package = pkgs.waybar.overrideAttrs (old: {
+      patches = (old.patches or [ ]) ++ [
+        # Adapted from upstream e17c0d9f for the workspace code in 0.15.0.
+        (pkgs.writeText "waybar-hyprland-lua-workspace-clicks.patch" ''
+          --- a/src/modules/hyprland/workspace.cpp
+          +++ b/src/modules/hyprland/workspace.cpp
+          @@ -71,20 +71,20 @@
+               try {
+                 if (id() > 0) {  // normal
+                   if (m_workspaceManager.moveToMonitor()) {
+          -          m_ipc.getSocket1Reply("dispatch focusworkspaceoncurrentmonitor " + std::to_string(id()));
+          +          m_ipc.getSocket1Reply("/dispatch hl.dsp.focus({ workspace = \"" + std::to_string(id()) + "\", on_current_monitor = true })");
+                   } else {
+          -          m_ipc.getSocket1Reply("dispatch workspace " + std::to_string(id()));
+          +          m_ipc.getSocket1Reply("/dispatch hl.dsp.focus({ workspace = \"" + std::to_string(id()) + "\" })");
+                   }
+                 } else if (!isSpecial()) {  // named (this includes persistent)
+                   if (m_workspaceManager.moveToMonitor()) {
+          -          m_ipc.getSocket1Reply("dispatch focusworkspaceoncurrentmonitor name:" + name());
+          +          m_ipc.getSocket1Reply("/dispatch hl.dsp.focus({ workspace = \"name:" + name() + "\", on_current_monitor = true })");
+                   } else {
+          -          m_ipc.getSocket1Reply("dispatch workspace name:" + name());
+          +          m_ipc.getSocket1Reply("/dispatch hl.dsp.focus({ workspace = \"name:" + name() + "\" })");
+                   }
+                 } else if (id() != -99) {  // named special
+          -        m_ipc.getSocket1Reply("dispatch togglespecialworkspace " + name());
+          +        m_ipc.getSocket1Reply("/dispatch hl.dsp.workspace.toggle_special(\"" + name() + "\")");
+                 } else {  // special
+          -        m_ipc.getSocket1Reply("dispatch togglespecialworkspace");
+          +        m_ipc.getSocket1Reply("/dispatch hl.dsp.workspace.toggle_special()");
+                 }
+                 return true;
+               } catch (const std::exception& e) {
+        '')
+      ];
+    });
     settings = {
       mainBar = {
         height = 34;
